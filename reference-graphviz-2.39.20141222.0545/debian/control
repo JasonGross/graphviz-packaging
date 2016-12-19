@@ -3,7 +3,49 @@ Section: graphics
 Priority: optional
 Maintainer: John Ellson <ellson@graphviz.org>
 Standards-Version: 3.9.1
-Build-Depends: tcl-dev, debhelper (>= 8), libfreetype6-dev, zlib1g-dev, libjpeg-dev, libpng12-dev, libxaw7-dev, bison, flex, autotools-dev, pdksh, libexpat1-dev, libfontconfig1-dev, libltdl3-dev, swig, libperl-dev, libgd2-noxpm-dev (>= 2.0.35), quilt (>= 0.40), groff-base, ghostscript, ruby, ruby1.9.1-dev, php5-dev, php5-cli, ocaml-nox, python-dev, python-minimal, libcairo2-dev, libpango1.0-dev, guile-1.8-dev, d-shlibs, librsvg2-dev, libtiff4-dev, libgtkglext1-dev, libglade2-dev, libgts-dev, freeglut3-dev, liblualib50-dev
+Build-Depends: tk-dev,
+ tcl-dev,
+ debhelper (>= 8),
+ libfreetype6-dev,
+ zlib1g-dev,
+ libjpeg-dev,
+ libpng12-dev,
+ libxaw7-dev,
+ bison,
+ flex,
+ autotools-dev,
+ pdksh,
+ libexpat1-dev,
+ libfontconfig1-dev,
+ libltdl3-dev,
+ swig,
+ libperl-dev,
+ libgd2-noxpm-dev (>= 2.0.35),
+ quilt (>= 0.40),
+ groff-base,
+ ghostscript,
+ lua5.2,
+ liblua5.2-dev,
+ ruby1.9.1,
+ ruby1.9.1-dev,
+ php5-dev,
+ php5-cli,
+ ocaml-nox,
+ python-all-dev (>= 2.6.6-3~),
+ libcairo2-dev,
+ libpango1.0-dev,
+ guile-2.0-dev,
+ d-shlibs,
+ chrpath,
+ librsvg2-dev,
+ libtiff4-dev,
+ libgtkglext1-dev,
+ libglade2-dev,
+ libgts-dev,
+ freeglut3-dev,
+ dh-autoreconf,
+ libgtk2.0-dev,
+ libgnomeui-dev
 Homepage: http://www.graphviz.org/
 
 Package: graphviz
@@ -42,7 +84,7 @@ Description: Guile bindings for graphviz
  Graphviz is a set of graph drawing tools. See the description of the graphviz
  package for a full description.
  .
- This package contains the guile (1.6) bindings.
+ This package contains the guile (2.0) bindings.
 
 Package: libgv-lua
 Architecture: any
@@ -52,7 +94,7 @@ Description: Lua bindings for graphviz
  Graphviz is a set of graph drawing tools. See the description of the graphviz
  package for a full description.
  .
- This package contains the lua5.1 bindings.
+ This package contains the lua5.2 bindings.
 
 Package: libgv-ocaml
 Architecture: any
@@ -79,33 +121,33 @@ Description: Perl bindings for graphviz
 
 Package: libgv-php5
 Architecture: any
-Section: interpreters
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Php5 bindings for graphviz
+Section: php
+Depends: ${shlibs:Depends}, ${php:Depends}, ${misc:Depends}
+Description: PHP5 bindings for graphviz
  Graphviz is a set of graph drawing tools. See the description of the graphviz
  package for a full description.
  .
- This package contains the Php5 bindings.
+ This package contains the PHP5 bindings.
 
 Package: libgv-python
 Architecture: any
-Section: interpreters
+Section: python
 Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
 Description: Python bindings for graphviz
  Graphviz is a set of graph drawing tools. See the description of the graphviz
  package for a full description.
  .
- This package contains the Python (2.5) bindings.
+ This package contains the Python bindings.
 
 Package: libgv-ruby
 Architecture: any
-Section: interpreters
+Section: ruby
 Depends: ${shlibs:Depends}, ruby1.9.1, ${misc:Depends}
 Description: Ruby bindings for graphviz
  Graphviz is a set of graph drawing tools. See the description of the graphviz
  package for a full description.
  .
- This package contains the Ruby (1.9) bindings.
+ This package contains the Ruby (1.9.1) bindings.
 
 
 Package: libgv-tcl
@@ -117,7 +159,7 @@ Description: Tcl bindings for graphviz
  Graphviz is a set of graph drawing tools. See the description of the graphviz
  package for a full description.
  .
- This package contains the Tcl (8.5) bindings.
+ This package contains the Tcl (8.6) bindings.
 
 Package: libgraphviz4
 Architecture: any
