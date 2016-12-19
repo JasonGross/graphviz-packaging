@@ -4,6 +4,7 @@ debian-sources/*/*/config/config.sub
 debian-sources/*/*/lib/expr/Makefile.orig
 debian-sources/*/*/lib/sfio/Makefile.orig
 *.dsc
+.*.swp
 *.tar.gz
 *.build
 *.changes
