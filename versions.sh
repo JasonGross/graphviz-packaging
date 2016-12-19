@@ -6,7 +6,7 @@ if [ "$TARGET" != trusty -a "$TARGET" != precise ]; then
   TARGET=trusty # precise #
 fi
 
-PPA_EXT="-1~${TARGET}~ppa5"
+PPA_EXT="-1~${TARGET}~ppa6"
 
 function to_debian_version() {
   echo "$1"
