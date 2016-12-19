@@ -1,3 +1,9 @@
+graphviz (2.39.20141222.0545-1~trusty~ppa1) trusty; urgency=medium
+
+  * Initial release.
+
+ -- Jason Gross <jgross@mit.edu>  Mon, 19 Dec 2016 13:53:55 -0500
+
 graphviz (2.39.20141222.0545-1~trusty) trusty; urgency=low
 
   * Update deps for trusty

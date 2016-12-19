@@ -26,6 +26,7 @@ for i in $VERSIONS; do
   fi
   mv debian debian-orig
   cp -a ../../../reference-graphviz-2.39.20141222.0545/debian ./ || exit $?
+  (echo; cat debian/changelog) >> debian-orig/changelog || exit $?
   mv -f debian-orig/* debian/ || exit $?
   rm -r debian-orig || exit $?
   popd
