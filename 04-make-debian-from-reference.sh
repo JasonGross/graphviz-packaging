@@ -29,5 +29,6 @@ for i in $VERSIONS; do
   (echo; cat debian/changelog) >> debian-orig/changelog || exit $?
   mv -f debian-orig/* debian/ || exit $?
   rm -r debian-orig || exit $?
+  echo "${PPA_EXT}_source.changes" > debian/series
   popd
 done
