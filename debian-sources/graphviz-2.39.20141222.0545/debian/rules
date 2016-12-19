@@ -36,7 +36,7 @@ DEV_PACKAGE       = $(CURDIR)/debian/libgraphviz-dev
 PYTHON_VERSIONS   = $(shell pyversions -s)
 PYTHON_PACKAGE    = $(CURDIR)/debian/libgv-python
 
-RUBY_VERSION      = 1.8
+RUBY_VERSION      = 1.9
 RUBY_PACKAGE      = $(CURDIR)/debian/libgv-ruby
 
 CONFIG_SCRIPTS=config/config.guess libltdl/config.guess \
