@@ -24,8 +24,10 @@ for i in $VERSIONS; do
   else
     sed -i s'/UNRELEASED/'"$TARGET"'/g' debian/changelog || exit $?
   fi
+  cat debian/changelog | sed s'/\(graphviz .\)[^-]*/\1@VERSION@/g' > debian/changelog.in || exit $?
   mv debian debian-orig
   cp -a ../../../reference-graphviz-2.39.20141222.0545/debian ./ || exit $?
+  (echo; cat debian/changelog.in) >> debian-orig/changelog.in || exit $?
   (echo; cat debian/changelog) >> debian-orig/changelog || exit $?
   mv -f debian-orig/* debian/ || exit $?
   rm -r debian-orig || exit $?
