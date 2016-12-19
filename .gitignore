@@ -1,1 +1,11 @@
 *~
+config/config.guess
+config/config.sub
+lib/expr/Makefile.orig
+lib/sfio/Makefile.orig
+*.dsc
+*.tar.gz
+*.build
+*.changes
+*.ppa.upload
+debian-sources/*/*/debian/changelog
