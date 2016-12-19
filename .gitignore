@@ -3,6 +3,7 @@ debian-sources/*/*/config/config.guess
 debian-sources/*/*/config/config.sub
 debian-sources/*/*/lib/expr/Makefile.orig
 debian-sources/*/*/lib/sfio/Makefile.orig
+debian-sources/*/*/debian
 *.dsc
 .*.swp
 *.tar.gz
