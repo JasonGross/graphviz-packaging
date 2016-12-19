@@ -1,8 +1,6 @@
 #!/bin/bash
 
-export NORMAL_VERSIONS="2.39.20141222.0545"
-
-export VERSIONS="2.39.20141222.0545"
+export VERSIONS="2.39.20161219.0054" # "2.39.20161219.0054 2.39.20141222.0545"
 
 if [ "$TARGET" != trusty -a "$TARGET" != precise ]; then
   TARGET=trusty # precise #
