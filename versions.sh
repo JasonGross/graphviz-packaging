@@ -1,12 +1,12 @@
 #!/bin/bash
 
-export VERSIONS="2.39.20161219.0054" # "2.39.20161219.0054 2.39.20141222.0545"
+export VERSIONS="2.39.20161220.0128" # "2.39.20161220.0128 2.39.20161219.0054 2.39.20141222.0545"
 
 if [ "$TARGET" != trusty -a "$TARGET" != precise ]; then
   TARGET=trusty # precise #
 fi
 
-PPA_EXT="-1~${TARGET}~ppa8"
+PPA_EXT="-1~${TARGET}~ppa9"
 
 function to_debian_version() {
   echo "$1"

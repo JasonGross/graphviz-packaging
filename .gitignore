@@ -4,6 +4,8 @@ debian-sources/*/*/config/config.sub
 debian-sources/*/*/lib/expr/Makefile.orig
 debian-sources/*/*/lib/sfio/Makefile.orig
 debian-sources/*/*/debian
+/debian-sources/graphviz-2.39.20161220.0128/
+/graphviz-source/
 *.dsc
 .*.swp
 *.tar.gz

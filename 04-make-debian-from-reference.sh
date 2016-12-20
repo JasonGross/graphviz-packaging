@@ -11,6 +11,14 @@ for i in $VERSIONS; do
   PKG="$(to_package_name "$i")"
   FOLDER="$(to_folder_name "$i")"
   ARCHIVE="$(to_archive_name "$i")"
+  if [ ! -e "debian-sources/$FOLDER/$FOLDER" ]; then
+    if [ -f "graphviz-source/$FOLDER.tar.gz" ]; then
+      mkdir -p "debian-sources/$FOLDER"
+      pushd "debian-sources/$FOLDER" || exit $?
+      tar -xzvf "../../graphviz-source/$FOLDER.tar.gz" || (RET=$?; rm -rf "$FOLDER"; exit $RET)
+      popd || exit $?
+    fi
+  fi
   pushd "debian-sources/$FOLDER" || exit $?
   cd "$FOLDER"
   rm -rf debian
